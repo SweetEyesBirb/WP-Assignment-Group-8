@@ -1,0 +1,1 @@
+/* opening times, address, about us. */

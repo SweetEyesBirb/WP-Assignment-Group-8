@@ -1,0 +1,140 @@
+@import url(base.css);
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* #logo {
+
+} */
+
+#search-bar {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+
+}
+
+#search-bar input {
+    border-radius: 5px;
+    border: none;
+    min-height: 1.4rem;
+}
+
+#login-box {
+    text-align: right;
+}
+
+nav {
+    display: block;
+    background-color: var(--bg-color-layer-1);
+    height: 40px;
+    padding: 10px;
+    align-items: center;
+}
+
+nav li {
+    display: inline;
+    margin: auto 5%;
+}
+
+nav li a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+#main-image {
+    background-image: url(../images/main-image.avif); /* From Unsplash.com accessed on 20/10/2023 */
+    background-size: 100%, auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+}
+
+#join-button {
+    position: absolute;
+    background-color: var(--bg-color-trast);
+    bottom: 50px;
+    left: 50%;
+    padding: 20px;
+    border-radius: 10px;
+    transform: translateX(-50%);
+}
+
+#join-button a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#welcome-message {
+    padding: 10%;
+}
+
+#facilities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 10%;
+}
+
+.facility-box {
+    aspect-ratio: 1;
+    background-size: 100%, auto;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#gym-facility-box {
+    background-image: url('../images/victor-freitas-WvDYdXDzkhs-unsplash-gym.jpg'); /* Photo by <a href="https://unsplash.com/@victorfreitas?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Victor Freitas</a> on <a href="https://unsplash.com/photos/person-about-to-lift-the-barbel-WvDYdXDzkhs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */  
+}
+
+#pool-facility-box {
+    background-image: url(../images/jacob-rice-lghvtPqfNfY-unsplash-swimming.jpg); /* Photo by <a href="https://unsplash.com/@jrice_photography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jacob Rice</a> on <a href="https://unsplash.com/photos/a-person-swimming-in-a-swimming-pool-lghvtPqfNfY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+
+}
+
+#yoga-facility-box {
+    background-image: url(../images/bruce-mars-gJtDg6WfMlQ-unsplash-yoga.jpg); /* Photo by <a href="https://unsplash.com/@brucemars?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">bruce mars</a> on <a href="https://unsplash.com/photos/group-of-women-doing-yoga-gJtDg6WfMlQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+}
+
+#whats-on-today {
+    padding: 20px;
+}
+
+.class {
+    margin: 20px;
+    min-height: 40px;
+    padding: 5%;
+    background-color: var(--bg-color-layer-1);
+    border-radius: 10px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* aligns the items on the horizontal line */
+}
+
+.class h3, p, button {
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.class button {
+    padding: 10px;
+    min-height: fit-content;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-button2);
+    font-weight: bold;
+}
+
+footer {
+    padding: 10px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}

@@ -1,0 +1,42 @@
+
+
+
+:root {
+    --background-color: #0d0021;
+    --text-color: aliceblue;
+    --bg-light: aliceblue;
+    --bg-color-layer-1:#2c2534;
+    --bg-color-trast:#99fc00;
+    --bg-button2: orangered;
+    --bg-pack: #d6d6d6;
+}
+
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+
+/* general */
+body {
+    background-color: var(--bg-light);
+}
+
+main {
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}

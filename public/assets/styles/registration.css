@@ -1,0 +1,60 @@
+
+/* form */
+
+form {
+    margin: 1rem 1rem;
+    text-align: center;
+    color: var(--background-color);
+    }
+
+    form h1 {
+        margin-bottom: 1rem;
+    }
+
+    #form-wrapper-main {
+        margin: 2rem auto;
+        max-width: 400px;
+    }
+
+    /* Style form groups (labels and inputs) */
+    .form-group {
+        display: flex;
+        flex-direction: column; /* Stack label and input vertically */
+        margin-bottom: 10px;
+    }
+
+    /* Style labels */
+    label {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    /* Style inputs */
+    form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        font-size: 16px;
+        width: 100%; /* Make inputs take up 100% of their container */
+        height: 2rem;
+    }
+
+    input[type="checkbox"] {
+        height: auto;
+        margin-top: 1rem;
+    }
+
+    form button {
+        min-width: 10rem;
+        min-height: 2.5rem;
+        border-radius: 5px;
+        margin: 0 auto;
+        background-color: var(--bg-button2);
+        color: var(--text-color);
+        border: none;
+
+    }
+
+    form footer a {
+        color: var(--text-color);
+    }
