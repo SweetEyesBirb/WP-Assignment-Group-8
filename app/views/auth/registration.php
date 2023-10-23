@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sports Centre Home</title>
+    <title>Sports Centre Registration Page</title>
     <!-- SEO meta tags here -->
 
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
@@ -14,27 +14,9 @@
 
 <body>
     <main>
-        <header>
-            <div id="logo">
-                <img src="logo.png" alt="Sports Centre Logo">
-            </div>
-            <div id="search-bar">
-                <input type="text" placeholder="Search..." aria-label="Search Bar">
-            </div>
-            <div id="login-box">
-                <!-- login form here -->
-                <p>Log In</p>
-            </div>
-        </header>
 
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Join</a></li>
-                <li><a href="#">Info</a></li>
-                <!-- Add more navigation items as needed -->
-            </ul>
-        </nav>
+    <? include '../../../includes/header.php'; ?>
+    <? include '../../../includes/navbar.php'; ?>
 
         <form id="signup-form" action="" method="post">
             <h1>Sign Up</h1>
@@ -77,8 +59,6 @@
 
     </main>
 
-    <footer>
-        <p>&copy; 2023 Sports Centre. All rights reserved.</p>
-    </footer>
+  <?php include '../../../includes/footer.php'; ?>
 
 </body>

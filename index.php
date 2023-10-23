@@ -10,34 +10,12 @@
     <link rel="stylesheet" href="../public/assets/styles/style.css">
 </head>
 <body>
-    <header>
-        <div id="logo">
-            <img src="logo.png" alt="Sports Centre Logo">
-        </div>
-        <div id="search-bar">
-            <input type="text" placeholder="Search..." aria-label="Search Bar">
-        </div>
-        <div id="login-box">
-            <!-- login form here -->
-            <p>Log In</p>
-        </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="../app/views/membership.php">Join</a></li>  <!-- link button               (join to registraton page ) --> 
-            <li><a href="#">Info</a></li> 
-            <!-- Add more navigation items as needed -->
-        </ul>
-    </nav>
+  <?php include './includes/header.php'; ?>
 
-    <div id="main-image"> <!-- From Unsplash.com accessed on 20/10/2023 -->
-        <!-- carousel markup here -->
-        <div id="join-button">
-            <a href="../app/views/membership.php">Join Now</a>
-        </div>
-    </div>
+  <?php include './includes/navbar.php'; ?>
+
+  <?php include './includes/main-image.php'; ?>
 
     <section id="welcome-message">
         <h1>Welcome to Sports Centre</h1>
@@ -74,9 +52,7 @@
         <!-- Add more classes as needed -->
     </section>
 
-    <footer>
-        <p>&copy; 2023 Sports Centre. All rights reserved.</p>
-    </footer>
+  <?php include './includes/footer.php'; ?>
 </body>
 </html>
 <!-- // Consider this snippet from ./app/controllers/index_controller.php: -->

@@ -13,31 +13,12 @@
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <img src="logo.png" alt="Sports Centre Logo">
-        </div>
-        <div id="search-bar">
-            <input type="text" placeholder="Search..." aria-label="Search Bar">
-        </div>
-        <div id="login-box">
-            <!-- login form here -->
-            <p>Log In</p>
-        </div>
-    </header>
 
-    <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">Info</a></li>
-            <!-- Add more navigation items as needed -->
-        </ul>
-    </nav>
+  <?php include '../../../includes/header.php'; ?>
 
-    <div id="main-image"> <!-- From Unsplash.com accessed on 20/10/2023 -->
-        <!-- carousel markup here -->
-    </div>
+  <?php include '../../../includes/navbar.php'; ?>
+
+  <?php include '../../../includes/main-image.php'; ?>
 
     <div id="pricing-pack-container">
         <div class="single-pricing-pack-div">
@@ -66,6 +47,5 @@
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2023 Sports Centre. All rights reserved.</p>
-    </footer>
+  <?php include '../../../includes/footer.php'; ?>
+</body>

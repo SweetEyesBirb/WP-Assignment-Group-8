@@ -1,0 +1,54 @@
+
+body {
+    background-color: var(--background-color);
+}
+
+#where-to-find-us-section {
+    color: var(--text-color);
+    margin: 50px auto;
+
+}
+#where-to-find-us-section p {
+    display: block;
+    margin: 20px;
+
+
+}
+
+#opening-hours-section {
+    margin: 100px auto;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+#opening-hours {
+    width: 60%;
+    margin: 20px auto;
+}
+
+#opening-hours li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#about-us-section {
+    color: var(--text-color);
+    width: 70%;
+    margin: 50px auto;
+}
+
+#about-us-section p {
+    display: block;
+    margin-top: 20px;
+}
+
+#contact-details-section {
+    color: var(--text-color);
+    margin: 100px auto;
+}
+
+#contact-details-section p {
+    display: block;
+    margin-top: 20px;
+}
