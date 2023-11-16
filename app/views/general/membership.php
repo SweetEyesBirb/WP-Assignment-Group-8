@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sports Centre Home</title>
-    <!-- SEO meta tags here -->
+    <title>Sports Centre Membership Information</title>
 
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
     <link rel="stylesheet" href="../../../public/assets/styles/join.css">
@@ -49,3 +48,4 @@
 
   <?php include '../../../includes/footer.php'; ?>
 </body>
+</html>

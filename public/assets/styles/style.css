@@ -1,6 +1,6 @@
 @import url(base.css);
 
-
+/* header */
 header {
     display: flex;
     justify-content: space-between;
@@ -29,6 +29,10 @@ header {
 
 #login-box {
     text-align: right;
+}
+
+#login-box a {
+    color: var(--text-color);
 }
 
 nav {

@@ -6,6 +6,6 @@
         <input type="text" placeholder="Search..." aria-label="Search Bar">
     </div>
     <div id="login-box">
-        <p>Log In</p>
+        <a href="../../../app/views/auth/login.php">Log In</a>
     </div>
 </header>

@@ -55,3 +55,5 @@
       
       <?php include '../../../includes/footer.php'; ?>
 </main>
+</body>
+</html>
