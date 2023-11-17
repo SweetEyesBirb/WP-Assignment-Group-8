@@ -34,17 +34,17 @@
 
     <section id="whats-on-today">
         <h2>What's on Today</h2>
-      <p>data could be retrieved from a table using SELECT FROM table_name WHERE date = "today"</p>
+      <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today"</p>
         <div class="class">
             <h3>Yoga Class</h3>
             <p>Time: 9:00 AM</p>
-            <p>Availability: 5 spots left</p>
+            <p>Availability: 5 spots left</p> <!-- availability may be hard to implement -->
             <button id="book-now-btn">Book Now</button>
         </div>
         <div class="class">
             <h3>Zumba Class</h3>
             <p>Time: 11:00 AM</p>
-            <p>Availability: 3 spots left</p>
+            <p>Availability: 3 spots left</p> <!-- availability may be hard to implement -->
             <button id="book-now-btn">Book Now</button>
         </div>
     </section>

@@ -10,15 +10,10 @@ header {
     color: var(--text-color);
 }
 
-/* #logo {
-
-} */
-
 #search-bar {
     flex: 1;
     text-align: right;
     margin-right: 10px;
-
 }
 
 #search-bar input {
@@ -38,7 +33,7 @@ header {
 nav {
     display: block;
     background-color: var(--bg-color-layer-1);
-    height: 40px;
+    min-height: 40px;
     padding: 10px;
     align-items: center;
 }
@@ -141,4 +136,33 @@ footer {
     padding: 10px;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  header div {
+    margin: 10px 0;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px auto;
+  }
+
+  .class {
+    flex-direction: column;
+  }
+
+  /* selects all children */
+  .class > * {
+    margin: 10px 0;
+  }
+
 }

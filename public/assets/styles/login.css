@@ -1,0 +1,13 @@
+form {
+  margin-top: 5rem;
+}
+
+#login-bottom-container {
+  max-width: 400px;
+  margin: 5rem auto 0 auto;
+}
+
+#login-bottom-container footer {
+  margin-top: 1rem;
+  border-radius: 3px;
+}

@@ -9,17 +9,29 @@
 
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
     <link rel="stylesheet" href="../../../public/assets/styles/registration.css">
+    <link rel="stylesheet" href="../../../public/assets/styles/admin.css">
+  
 </head>
 
 <body>
-  <? include '../../../includes/header.php'; ?>
+  <?php include '../../../includes/header.php'; ?>
 
   <main>
 
     <h1>Add Classes</h1>
 
-    <form action="your_server_script.php" method="post">
-      <h2>Add Yoga Class</h2>
+    
+    <form action="" method="post">
+<!--  POST values INTO tbl_classes (
+      class_id INT PRIMARY KEY AUTO_INCREMENT,
+      class_name VARCHAR(50),
+      class_date DATE,
+      start_time TIME,
+      end_time TIME,
+      price DECIMAL(10, 2)
+      ); -->
+      
+      <!-- <h2>Add Yoga Class</h2> -->
       
       <div id="form-wrapper-main">
 
@@ -27,6 +39,7 @@
         <label for="class_name">Class Name:</label>
         <select id="class_name" name="class_name" required>
             <option value="Yoga">Yoga</option>
+            <option value="Swimming">Swimming</option>
         </select>
         </div>
 
@@ -47,7 +60,10 @@
 
         <div class="form-group">
         <label for="price">Price:</label>
-        <input type="number" id="price" name="price" step="0.01" required>
+        <!-- <input type="number" id="price" name="price" step="0.01" required> -->
+          <select id="price" name="price" required>
+          <option value="8.50">8.50 £</option>
+          <option value="10.50">10.50 £</option>
         </div>
 
         <button type="submit">Add Class</button>

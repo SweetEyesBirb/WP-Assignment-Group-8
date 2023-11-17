@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
     <link rel="stylesheet" href="../../../public/assets/styles/registration.css">
+  <link rel="stylesheet" href="../../../public/assets/styles/login.css">
 </head>
 
 <body>
@@ -33,14 +34,13 @@
       </div>
         
       <button type="submit">Login</button>
-      <label>
-        <input type="checkbox" checked="checked" name="remember"> Remember me
-      </label>
     </div>
 
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+    <div id="login-bottom-container">
+      <p>Forgot password?<a href="#"><strong> Click Here</strong</a></p>
+      <footer id="login-footer">
+      <p>Not a member?<a href="registration.php"><strong> Register Here</strong</a></p>
+        </footer>
     </div>
     
   </form>

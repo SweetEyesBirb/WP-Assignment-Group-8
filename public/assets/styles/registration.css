@@ -23,21 +23,26 @@ form {
         margin-bottom: 10px;
     }
 
-    /* Style labels */
     label {
         font-weight: bold;
         margin-bottom: 5px;
     }
 
-    /* Style inputs */
     form input {
         padding: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid var(--border-input);
         border-radius: 10px;
         font-size: 16px;
         width: 100%; /* Make inputs take up 100% of their container */
         height: 2rem;
     }
+
+  select {
+    height: 2rem;
+    border-radius: 10px;
+    font-size: 16px;
+    border: 1px solid var(--border-input);
+  }
 
     input[type="checkbox"] {
         height: auto;

@@ -136,35 +136,44 @@
             <div id="form-wrapper-main">
                 <div class="form-group">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" value="<?php echo $name;?>">
+                    <input type="text" name="name" id="name" value="<?php echo $name;?>" required>
                 </div>
                 <div class="form-group">
                     <label for="surname">Surname:</label>
-                    <input type="text" name="surname" id="surname" value="<?php echo $surname;?>">
+                    <input type="text" name="surname" id="surname" value="<?php echo $surname;?>" required>
                 </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+              </div>
+
+              <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
               <div class="form-group">
                   <label for="email">Email:</label>
-                  <input type="email" name="email" id="email" value="<?php echo $email;?>">
+                  <input type="email" name="email" id="email" value="<?php echo $email;?>" required>
               </div>
               <div class="form-group">
                   <label for="email-again">Email Again:</label>
-                  <input type="email" name="email-again" id="email-again" value="<?php echo $emailAgain;?>">
+                  <input type="email" name="email-again" id="email-again" value="<?php echo $emailAgain;?>" required>
               </div>
                 <div class="form-group">
                     <label for="password">Password:</label>
-                    <input type="password" name="password" id="password" value="<?php echo $password; ?>">
+                    <input type="password" name="password" id="password" value="<?php echo $password; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="password-again">Password Again:</label>
-                    <input type="password" name="password-again" id="password-again" value="<?php echo $passwordAgain; ?>">
+                    <input type="password" name="password-again" id="password-again" value="<?php echo $passwordAgain; ?>" required>
                 </div>
-                <div class="form-group">
-                    <label for="agree">
-                        <input type="checkbox" name="agree" id="agree" value="yes" /> I agree
-                        with the
-                        <a href="#" title="term of services">term of services</a>
-                    </label>
-                </div>
+              
                 <button type="submit">Register</button>
             </div>
             <footer>Already a member? <a href="login.php">Login here</a></footer>

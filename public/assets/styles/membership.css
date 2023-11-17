@@ -1,5 +1,3 @@
-@import url(base.css);
-
 
 #pricing-pack-container {
     width: 80%;
@@ -9,10 +7,15 @@
 
 .single-pricing-pack-div {
     background-color: var(--bg-pack);
+    border: 1px solid var(--border-input);
     padding: 5%;
     max-width: 300px;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+.single-pricing-pack-div:hover {
+  background-color: #e5fdff;
 }
 
 .pricing-value h2, h4 {
@@ -21,7 +24,7 @@
 
 .features-list {
     margin: 20px auto;
-    border: solid 1px var(--background-color);
+    border: solid 1px var(--border-input);
     border-radius: 10px;
 }
 
@@ -31,7 +34,7 @@
 
 .get-pack {
     background-color: var(--bg-color-trast);
-    border: solid 3px var(--background-color);
+    border: solid 1px var(--border-input);
     width: 50%;
     margin: auto;
     height: 3rem;

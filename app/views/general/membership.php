@@ -8,7 +8,7 @@
     <title>Sports Centre Membership Information</title>
 
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
-    <link rel="stylesheet" href="../../../public/assets/styles/join.css">
+    <link rel="stylesheet" href="../../../public/assets/styles/membership.css">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             </div>
 
             <div class="get-pack">
-                <a class="get-btn" href="get.html">GET</a>
+                <a class="get-btn" href="../checkout/checkout.php">GET</a>
             </div>
         </div>
     </div>
