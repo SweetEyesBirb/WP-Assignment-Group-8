@@ -10,7 +10,7 @@ header {
     color: var(--text-color);
 }
 
-#search-bar {
+/* #search-bar {
     flex: 1;
     text-align: right;
     margin-right: 10px;
@@ -20,7 +20,7 @@ header {
     border-radius: 5px;
     border: none;
     min-height: 1.4rem;
-}
+} */
 
 #login-box {
     text-align: right;
@@ -138,7 +138,7 @@ footer {
     color: var(--text-color);
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 500px) {
   header {
     flex-direction: column;
     justify-content: space-between;

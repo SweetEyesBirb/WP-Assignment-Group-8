@@ -57,12 +57,11 @@ form {
         background-color: var(--bg-button2);
         color: var(--text-color);
         border: none;
-
     }
 
-form button:hover {
+/* form button:hover {
   cursor: pointer;
-}
+} */
 
     form footer a {
         color: var(--text-color);

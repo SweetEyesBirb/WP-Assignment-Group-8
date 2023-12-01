@@ -21,20 +21,28 @@
     </section>
 
     <section id="facilities">
+      <a href="#">
         <div class="facility-box" id="gym-facility-box">
             <h2>Gym</h2>
         </div>
+      </a>
+      <a href="#">
         <div class="facility-box" id="pool-facility-box">
             <h2>Swimming Pool</h2>
         </div>
+      </a>
+      <a href="./app/views/yoga/yoga.php">
         <div class="facility-box" id="yoga-facility-box">
             <h2>Yoga</h2>
         </div>
+      </a>
     </section>
 
     <section id="whats-on-today">
         <h2>What's on Today</h2>
-      <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today"</p>
+      
+      <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today". When clicking on Book Now, the booking information should be sent to the "bookings table" in the database if the user has logged i</p>
+      
         <div class="class">
             <h3>Yoga Class</h3>
             <p>Time: 9:00 AM</p>

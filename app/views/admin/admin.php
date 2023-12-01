@@ -64,12 +64,44 @@
           <select id="price" name="price" required>
           <option value="8.50">8.50 £</option>
           <option value="10.50">10.50 £</option>
+          </select>
         </div>
 
         <button type="submit">Add Class</button>
         </div>
         
     </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Class Name</th>
+          <th>Date</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Yoga</td>
+          <td>2023-03-01</td>
+          <td>9:00 AM</td>
+          <td>11:00 AM</td>
+          <td>8.50 £</td>
+          <td><button>Delete</button></td>
+        </tr>
+        <tr>
+          <td>Swimming</td>
+          <td>2023-03-01</td>
+          <td>9:00 AM</td>
+          <td>11:00 AM</td>
+          <td>10.50 £</td>
+          <td><button>Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
 
   </main>
 

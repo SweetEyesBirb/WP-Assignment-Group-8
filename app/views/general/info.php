@@ -22,7 +22,7 @@
             <h2>WHERE TO FIND US</h2>
             <p>123 Some Imaginary Road</p>
             <p>UK12 34EN</p>
-            <p>TOWN NAME</p>
+            <p>Barnsley</p>
         </section>
 
         <section id="opening-hours-section">
@@ -34,23 +34,20 @@
                 <li><strong>THURSDAY</strong> <span>8:00 - 21:00</span></li>
                 <li><strong>FRIDAY</strong> <span>8:00 - 21:00</span></li>
                 <li><strong>SATURDAY</strong> <span>8:00 - 21:00</span></li>
-                <li><strong>SUNDAY</strong> <span>8:00 - 21:00</span></li>
+                <li><strong>SUNDAY</strong> <span>8:00 - 16:30</span></li>
             </ul>
         </section>
 
         <section id="about-us-section">
             <h2>ABOUT US</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia voluptatum, sit dignissimos, laborum accusantium qui placeat nobis maiores quo repellendus fugit temporibus labore magni dolor alias dicta. Ullam, tempora maiores?
-                Atque sapiente cum illum beatae architecto, necessitatibus aliquid eveniet? Animi quod explicabo, optio natus dolores cupiditate esse ex iste? Soluta consectetur ab voluptate nostrum debitis repellendus sapiente porro, nihil architecto!
-                Et dolore tempore saepe quas officiis expedita perspiciatis dolorum! Voluptates ut dicta iusto laudantium, atque mollitia. Eos optio libero iure? Porro similique nesciunt ratione doloremque commodi ex, laboriosam fuga recusandae.
-                Libero velit, quas obcaecati qui, officiis tempora rem ut reiciendis mollitia recusandae molestias expedita. Et odio magni natus dignissimos dolores necessitatibus nobis explicabo consequatur sed! Ducimus possimus harum assumenda quos.
+                <p>We have a tonne of entertaining things for you to do. In addition to our award-winning swimming lessons and other aquatic activities in the pool, you may also use our state-of-the-art gym and participate in a range of group fitness courses. Our sports hall offers a range of activities for you to enjoy.
                 </p>
         </section>
 
         <section id="contact-details-section">
             <h2>CONTACT US</h2>
-            <p>Email Address</p>
-            <p>Phone Number</p>
+            <p>Email Address: Group8SportsCentre@gmail.com</p>
+            <p>Phone Number: 079577595342</p>
         </section>
       
       <?php include '../../../includes/footer.php'; ?>

@@ -1,3 +1,42 @@
 main {
   margin: 2rem auto;
 }
+
+table {
+  min-width: 50%;
+  border-spacing: 1rem;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid var(--border-input);
+    padding: 10px;
+}
+
+td button {
+  background-color: var(--bg-button2);
+  color: var(--text-color);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+@media screen and (max-width: 580px) {
+
+  table {
+    border-collapse: separate;
+  }
+
+  th, td {
+      display: block;
+      width: 100%;
+  }
+
+  th:before {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 5px;
+  }
+  
+}
