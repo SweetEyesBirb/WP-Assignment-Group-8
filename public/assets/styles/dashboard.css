@@ -1,0 +1,49 @@
+
+#dashboard {
+  margin: 2rem auto;
+}
+
+#dashboard h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.booked-class {
+    margin: 20px;
+    min-height: 40px;
+    padding: 5%;
+    background-color: var(--bg-color-layer-1);
+    border-radius: 10px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;  /* aligns the items on the horizontal line */
+}
+
+.booked-class h3, p, button {
+    display: inline;
+    font-size: 1.2rem;
+    margin: 0 5px;
+}
+
+.booked-class button {
+    padding: 10px;
+    min-height: fit-content;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--bg-button2);
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .booked-class {
+    flex-direction: column;
+  }
+
+  /* selects all children */
+  .booked-class > * {
+    margin: 10px 0;
+  }
+}

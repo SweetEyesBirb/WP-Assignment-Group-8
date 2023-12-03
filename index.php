@@ -41,7 +41,7 @@
     <section id="whats-on-today">
         <h2>What's on Today</h2>
       
-      <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today". When clicking on Book Now, the booking information should be sent to the "bookings table" in the database if the user has logged i</p>
+      <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today". When clicking on Book Now, the booking information should be sent to the "bookings table" in the database if the user has logged in</p>
       
         <div class="class">
             <h3>Yoga Class</h3>
