@@ -6,16 +6,13 @@
 }
 
 .single-pricing-pack-div {
-    background-color: var(--bg-pack);
+    background-color: var(--background-color);
+    color: var(--text-color);
     border: 1px solid var(--border-input);
     padding: 5%;
     max-width: 300px;
     border-radius: 10px;
     margin: 0 auto;
-}
-
-.single-pricing-pack-div:hover {
-  background-color: #e5fdff;
 }
 
 .pricing-value h2, h4 {
@@ -34,6 +31,7 @@
 
 .get-pack {
     background-color: var(--bg-color-trast);
+    color: var(--background-color);
     border: solid 1px var(--border-input);
     width: 50%;
     margin: auto;
@@ -41,9 +39,16 @@
     border-radius: 5px;
     text-align: center;
     line-height: 3rem; /* line-height same height as height property to align text vertically */
+    transition: color 0.5s ease, background-color 0.5s ease-in-out;
 }
 
 .get-pack a {
+    color: inherit;
     font-weight: bold;
     font-size: 1.5rem;
+}
+
+.get-pack:hover {
+    background-color: var(--bg-button1);
+    color: var(--text-color);
 }

@@ -21,12 +21,12 @@
     </section>
 
     <section id="facilities">
-      <a href="#">
+      <a href="./app/views/gym/gym.php">
         <div class="facility-box" id="gym-facility-box">
             <h2>Gym</h2>
         </div>
       </a>
-      <a href="#">
+      <a href="/app/views/swimming-pool/swimming-pool.php">
         <div class="facility-box" id="pool-facility-box">
             <h2>Swimming Pool</h2>
         </div>

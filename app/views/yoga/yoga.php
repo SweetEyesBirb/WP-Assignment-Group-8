@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sports Centre Yoga Classes</title>
-
+  
+  <meta name= "description" content="Book your yoga classes here, have fun and get healthy">
+<meta name="keywords" content= "yoga, yoga classes, yoga booking, yoga booking form, yo"
+  <meta name="author" content="Sports Centre Yoga Classes">
+  
     <link rel="stylesheet" href="../../../public/assets/styles/style.css">
     <link rel="stylesheet" href="../../../public/assets/styles/yoga.css">
 </head>

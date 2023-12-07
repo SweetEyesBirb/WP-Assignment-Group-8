@@ -1,6 +1,7 @@
 
 #dashboard {
   margin: 2rem auto;
+  padding: 0 5%;
 }
 
 #dashboard h1 {
@@ -8,7 +9,7 @@
   margin-bottom: 1rem;
 }
 
-.booked-class {
+/* .booked-class {
     margin: 20px;
     min-height: 40px;
     padding: 5%;
@@ -17,7 +18,7 @@
     color: var(--text-color);
     display: flex;
     justify-content: space-around;
-    align-items: center;  /* aligns the items on the horizontal line */
+    align-items: center;
 }
 
 .booked-class h3, p, button {
@@ -33,7 +34,7 @@
     border: none;
     background-color: var(--bg-button2);
     font-weight: bold;
-}
+} */
 
 
 @media screen and (max-width: 500px) {

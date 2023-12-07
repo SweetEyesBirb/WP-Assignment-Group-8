@@ -21,7 +21,7 @@
       <p>Welcome to your dashboard, user name!</p> <br>
       <p>You can view or cancel your bookings here</p>
 
-      <div class="booked-class">
+      <div class="class booked-class">
           <h3>Class Name</h3>
           <p>Date: 02-12-2023</p>
           <p>Time: 11:00 - 12:00</p>

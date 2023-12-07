@@ -2,10 +2,13 @@
   width: 100%;
   min-height: 90vh;
   background-image: url(../../../public/assets/images/victor-freitas-WvDYdXDzkhs-unsplash-gym.jpg);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-#gym-session {
-  margin: 5rem 0;
+
+#gym-sessions {
+  margin: 5rem auto 15% auto;
+  padding: 0 5%;
 }
