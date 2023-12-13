@@ -40,6 +40,8 @@
         <select id="class_name" name="class_name" required>
             <option value="Yoga">Yoga</option>
             <option value="Swimming">Swimming</option>
+            <option value="Gym">Gym</option>
+        </select>
         </select>
         </div>
 
@@ -62,6 +64,7 @@
         <label for="price">Price:</label>
         <!-- <input type="number" id="price" name="price" step="0.01" required> -->
           <select id="price" name="price" required>
+          <option value="6.50">6.50 £</option>
           <option value="8.50">8.50 £</option>
           <option value="10.50">10.50 £</option>
           </select>

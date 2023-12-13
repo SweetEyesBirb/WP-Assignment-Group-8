@@ -37,9 +37,9 @@
     </div>
 
     <div id="login-bottom-container">
-      <p>Forgot password?<a href="#"><strong> Click Here</strong</a></p>
+      <p>Forgot password?<a href="#"><strong> Click Here</strong></a></p>
       <footer id="login-footer">
-      <p>Not a member?<a href="registration.php"><strong> Register Here</strong</a></p>
+      <p>Not a member?<a href="registration.php"><strong> Register Here</strong></a></p>
         </footer>
     </div>
     

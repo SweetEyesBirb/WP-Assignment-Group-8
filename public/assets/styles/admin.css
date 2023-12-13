@@ -20,6 +20,11 @@ td button {
   border: none;
   padding: 5px 10px;
   border-radius: 3px;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+td button:hover {
+  box-shadow: 0 0 10px var(--bg-button2);
 }
 
 @media screen and (max-width: 580px) {

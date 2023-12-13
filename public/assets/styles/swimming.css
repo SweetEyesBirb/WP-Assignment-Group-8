@@ -1,0 +1,13 @@
+#swimming-main-image{
+  width: 100%;
+  min-height: 90vh;
+  background-image: url(../../../public/assets/images/jacob-rice-lghvtPqfNfY-unsplash-swimming.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#swimming-classes {
+  margin: 5rem auto 15% auto;
+  padding: 0 5%;
+ 

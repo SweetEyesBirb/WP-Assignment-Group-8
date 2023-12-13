@@ -57,11 +57,12 @@ form {
         background-color: var(--bg-button2);
         color: var(--text-color);
         border: none;
+        transition: box-shadow 0.2s ease-in-out;
     }
 
-/* form button:hover {
-  cursor: pointer;
-} */
+    form button:hover {
+      box-shadow: 0 0 10px var(--bg-button2);
+    }
 
     form footer a {
         color: var(--text-color);

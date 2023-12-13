@@ -6,6 +6,9 @@
 
     <title>Sports Centre Home</title>
 
+    <meta name= "description" content="Welcome to Group 8 Sports Centre. We offer various classes including Yoga, Swimming and Gym. Book your sports here, have fun and get healthy. Our new facility offers the latest equipment!">
+    <meta name="keywords" content="home page, yoga, swimming, gym, swimming pool, sports, book, sports booking, sports booking form, sports centre, group 8 sports centre, sports centre booking">
+
     <link rel="stylesheet" href="../public/assets/styles/style.css">
 </head>
 <body>
