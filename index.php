@@ -9,7 +9,7 @@
     <meta name= "description" content="Welcome to Group 8 Sports Centre. We offer various classes including Yoga, Swimming and Gym. Book your sports here, have fun and get healthy. Our new facility offers the latest equipment!">
     <meta name="keywords" content="home page, yoga, swimming, gym, swimming pool, sports, book, sports booking, sports booking form, sports centre, group 8 sports centre, sports centre booking">
 
-    <link rel="stylesheet" href="../public/assets/styles/style.css">
+    <link rel="stylesheet" href="./public/assets/styles/style.css">
 </head>
 <body>
 
@@ -29,7 +29,7 @@
             <h2>Gym</h2>
         </div>
       </a>
-      <a href="/app/views/swimming-pool/swimming-pool.php">
+      <a href="./app/views/swimming-pool/swimming-pool.php">
         <div class="facility-box" id="pool-facility-box">
             <h2>Swimming Pool</h2>
         </div>
