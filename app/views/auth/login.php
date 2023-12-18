@@ -1,3 +1,23 @@
+<?php
+// login.php
+require_once '../../controllers/UserController.php';
+
+// Check for success message
+if (isset($_GET['registered']) && $_GET['registered'] == true) {
+    echo '<p style="color: green;">Your account has been created successfully. Please login here.</p>';
+}
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Instantiate the UserController
+  $userController = new UserController();
+
+  // Call the loginUser method with the form data
+  $userController->loginUser($_POST);
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,23 +34,23 @@
 
 <body>
 
-  <? include '../../../includes/header.php'; ?>
-  <? include '../../../includes/navbar.php'; ?>
+  <?php include '../../../includes/header.php'; ?>
+  <?php include '../../../includes/navbar.php'; ?>
 
   <main>
   
-  <form action="/action_page.php" method="post">
+  <form action="login.php" method="post">
     <h2>Login Form</h2>
 
     <div id="form-wrapper-main" class="container">
       <div class="form-group">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="user-email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Your Email" name="user-email" required>
       </div>
 
       <div class="form-group">
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Your Password" name="psw" required>
       </div>
         
       <button type="submit">Login</button>

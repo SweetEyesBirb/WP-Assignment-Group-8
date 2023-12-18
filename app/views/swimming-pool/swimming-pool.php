@@ -1,3 +1,12 @@
+<?php
+require_once '../../models/Swimming.php';
+
+// Create a swimming object
+$swimmingModel = new Swimming();
+
+// Get upcoming swimming sessions
+$upcomingSessions = $swimmingModel->getUpcomingSwimmingSessions();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +15,7 @@
 
     <title>Sports Centre Swimming Sessions</title>
 <meta name= "description" content="Book your swimming here, have fun and get healthy">
-<meta name="keywords" content="swimming, pool, book, swimming pool, swimming pool booking"
+<meta name="keywords" content="swimming, pool, book, swimming pool, swimming pool booking">
 <meta name="author" content="Sports Centre">
 <link rel="stylesheet" href="../../../public/assets/styles/style.css">
 <link rel="stylesheet" href="../../../public/assets/styles/swimming.css">
@@ -27,26 +36,26 @@
 
         <p>For each container, get tuple from database and display tuple info. When clicking on Book Now, the booking information should be sent to the "bookings table" in the database</p>
 
-      <div class="class">        
-          <h3>Date: </h3>
-          <p>Time: 11:00 - 12:00</p>
-          <p>Price: 8,5 £</p>
-          <button id="book-now-btn">Book Now</button>
-      </div>
-
-      <div class="class">        
-          <h3>Date: </h3>
-          <p>Time: 14:00 - 15:00</p>
-          <p>Price: 8,5 £</p>
-          <button id="book-now-btn">Book Now</button>
-      </div>
-
-      <div class="class">        
-          <h3>Date: </h3>
-          <p>Time: 16:00 - 18:00</p>
-          <p>Price: 8,5 £</p>
-          <button id="book-now-btn">Book Now</button>
-      </div>
+        <?php if ($upcomingSessions): ?>
+        <!-- Display upcoming sessions if found -->
+        <?php foreach ($upcomingSessions as $session): ?>
+          <div class="class">
+            <h3>Date:
+              <?php echo $session['formatted_date']; ?>
+            </h3>
+            <p>Time:
+              <?php echo $session['formatted_start_time'] . "-" . $session['formatted_end_time']; ?>
+            </p>
+            <p>Price:
+              <?php echo $session['price']; ?> £
+            </p>
+            <button id="book-now-btn">Book Now</button>
+          </div>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <!-- Display message if no upcoming sessions -->
+        <p>Sorry, we have no upcoming swimming sessions</p>
+      <?php endif; ?>
 
     </section>
     

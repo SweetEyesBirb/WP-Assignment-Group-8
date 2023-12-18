@@ -1,3 +1,13 @@
+<?php
+require_once './app/models/WhatsOn.php';
+
+// Create a WhatsOn object
+$whatIsOnModel = new WhatsOn();
+
+// Get upcoming sessions
+$todaysSessions = $whatIsOnModel->getWhatIsOn();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,18 +56,26 @@
       
       <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today". When clicking on Book Now, the booking information should be sent to the "bookings table" in the database if the user has logged in</p>
       
+      <?php if ($todaysSessions): ?>
+        <?php foreach ($todaysSessions as $tdSession): ?>
         <div class="class">
-            <h3>Yoga Class</h3>
-            <p>Time: 9:00 AM</p>
-            <p>Availability: 5 spots left</p> <!-- availability may be hard to implement -->
+            <h3><?php echo $tdSession['class_name']; ?> Class</h3>
+            <p>Time: <?php echo $tdSession['formatted_start_time'] . "-" . $tdSession['formatted_end_time']; ?></p>
+            <p>Price: <?php echo $tdSession['price']; ?></p>
             <button id="book-now-btn">Book Now</button>
         </div>
-        <div class="class">
+        <?php endforeach; ?>
+      <?php else: ?>
+        <!-- Display message if no upcoming sessions -->
+        <p>Sorry, there are no classes today</p>
+      <?php endif; ?>
+
+<!--         <div class="class">
             <h3>Zumba Class</h3>
             <p>Time: 11:00 AM</p>
-            <p>Availability: 3 spots left</p> <!-- availability may be hard to implement -->
+            <p>Availability: 3 spots left</p>
             <button id="book-now-btn">Book Now</button>
-        </div>
+        </div> -->
     </section>
 
   <?php include './includes/footer.php'; ?>
