@@ -1,3 +1,31 @@
+<?php
+
+// admin.php
+
+require_once('../../controllers/ClassController.php');
+require_once ('../../models/WhatsOn.php');
+
+$classController = new ClassController();
+
+if (isset($_GET['action'])) {
+    switch ($_GET['action']) {
+        case 'addClass':
+            $classController->addClass();
+            break;
+        // Add more cases for other actions if needed
+    }
+}
+
+// instantiate a new WhatOn object
+$allClassesModel = new WhatsOn();
+
+// run the getAllSessions() method
+$allSessions = $allClassesModel->getAllSessions();
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,17 +50,7 @@
     <h1>Add Classes</h1>
 
     
-    <form action="" method="post">
-<!--  POST values INTO tbl_classes (
-      class_id INT PRIMARY KEY AUTO_INCREMENT,
-      class_name VARCHAR(50),
-      class_date DATE,
-      start_time TIME,
-      end_time TIME,
-      price DECIMAL(10, 2)
-      ); -->
-      
-      <!-- <h2>Add Yoga Class</h2> -->
+    <form action="admin.php?action=addClass" method="post">
       
       <div id="form-wrapper-main">
 
@@ -63,7 +81,6 @@
 
         <div class="form-group">
         <label for="price">Price:</label>
-        <!-- <input type="number" id="price" name="price" step="0.01" required> -->
           <select id="price" name="price" required>
           <option value="6.50">6.50 £</option>
           <option value="8.50">8.50 £</option>
@@ -88,22 +105,22 @@
         </tr>
       </thead>
       <tbody>
+      <?php if ($allSessions): ?>
+        <!-- Display upcoming sessions if found -->
+        <?php foreach ($allSessions as $session): ?>
         <tr>
-          <td>Yoga</td>
-          <td>2023-03-01</td>
-          <td>9:00 AM</td>
-          <td>11:00 AM</td>
-          <td>8.50 £</td>
+          <td><?php echo $session['class_name']; ?></td>
+          <td><?php echo $session['formatted_date']; ?></td>
+          <td><?php echo $session['formatted_start_time']; ?></td>
+          <td><?php echo $session['formatted_end_time']; ?></td>
+          <td><?php echo $session['price']; ?> £</td>
           <td><button>Delete</button></td>
         </tr>
-        <tr>
-          <td>Swimming</td>
-          <td>2023-03-01</td>
-          <td>9:00 AM</td>
-          <td>11:00 AM</td>
-          <td>10.50 £</td>
-          <td><button>Delete</button></td>
-        </tr>
+        <?php endforeach; ?>
+      <?php else: ?>
+        <!-- Display message if no sessions -->
+        <p>No sessions to display</p>
+      <?php endif; ?>
       </tbody>
     </table>
 

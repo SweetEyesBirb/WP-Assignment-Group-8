@@ -50,7 +50,7 @@ $upcomingSessions = $gymModel->getUpcomingGymSessions();
               <?php echo $session['formatted_date']; ?>
             </h3>
             <p>Time:
-              <?php echo $session['formatted_start_time'] . "-" . $session['formatted_end_time']; ?>
+              <?php echo $session['formatted_start_time'] . " - " . $session['formatted_end_time']; ?>
             </p>
             <p>Price:
               <?php echo $session['price']; ?> £

@@ -30,6 +30,23 @@ class WhatsOn {
 
     }
 
+
+    public function getAllSessions() {
+
+        // use getConnection() method from the DbConnection class
+        $conn = $this->dbWhatIsOn->getConnection();
+
+        $allClassesQuery = "SELECT *, DATE_FORMAT(date, '%d-%m-%Y') AS formatted_date, TIME_FORMAT(time_start, '%H:%i') AS formatted_start_time, TIME_FORMAT(time_end, '%H:%i') AS formatted_end_time FROM tbl_classes";
+
+        $stmt = $conn->prepare($allClassesQuery);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $sessions = $result->fetch_all(MYSQLI_ASSOC);
+        $stmt->close();
+        return $sessions;
+
+    }
+
 }
 
 ?>
