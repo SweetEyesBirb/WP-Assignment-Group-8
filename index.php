@@ -29,9 +29,9 @@ $todaysSessions = $whatIsOnModel->getWhatIsOn();
 <body>
 
   <?php include './includes/header.php';
-  include './includes/navbar.php';
+        include './includes/navbar.php';
 
-  include './includes/main-image.php'; ?>
+        include './includes/main-image.php'; ?>
 
   <section id="welcome-message">
     <h1>Welcome to Sports Centre</h1>
@@ -62,25 +62,56 @@ $todaysSessions = $whatIsOnModel->getWhatIsOn();
     <p>data could be retrieved from a table using SELECT * FROM table_name WHERE date = "today". When clicking on Book
       Now, the booking information should be sent to the "bookings table" in the database if the user has logged in</p>
 
-    <?php if ($todaysSessions): ?>
-      <?php foreach ($todaysSessions as $tdSession): ?>
-        <div class="class">
-          <h3>
-            <?php echo $tdSession['class_name']; ?> Class
-          </h3>
-          <p>Time:
-            <?php echo $tdSession['formatted_start_time'] . " - " . $tdSession['formatted_end_time']; ?>
-          </p>
-          <p>Price:
-            <?php echo $tdSession['price']; ?>
-          </p>
-          <button id="book-now-btn">Book Now</button>
-        </div>
-      <?php endforeach; ?>
+      <?php if ($todaysSessions): ?>
+    <?php foreach ($todaysSessions as $tdSession): ?>
+      <div class="class">
+        <h3>
+          <?php echo $tdSession['class_name']; ?> Class
+        </h3>
+        <p>Time:
+          <?php echo $tdSession['formatted_start_time'] . " - " . $tdSession['formatted_end_time']; ?>
+        </p>
+        <p>Price:
+          <?php echo $tdSession['price']; ?>
+        </p>
+
+        <!-- Add a form for booking with hidden input fields -->
+        <form class="booking-form" action="" method="post">
+          <input type="hidden" name="class_id" value="<?php echo $tdSession['class_id']; ?>">
+          <button type="button" class="book-now-btn" onclick="bookClass(<?php echo $tdSession['class_id']; ?>)">Book Now</button>
+        </form>
+      </div>
+    <?php endforeach; ?>
+  <?php else: ?>
+    <!-- Display message if no upcoming sessions -->
+    <p>Sorry, there are no classes today</p>
+  <?php endif; ?>
+</section>
+
+<!-- Include JavaScript to handle the AJAX request -->
+<script>
+  function bookClass(classId) {
+    // Check if the user is logged in (you may need to adjust the condition)
+    <?php if (isset($_SESSION['user_id'])): ?>
+      // Send an AJAX request to handle the booking
+      var xhr = new XMLHttpRequest();
+      xhr.open("POST", "./app/controllers/BookingController.php", true);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          // Handle the response if needed
+          console.log(xhr.responseText);
+        }
+      };
+
+      // Send the class ID as a parameter
+      xhr.send("class_id=" + classId);
     <?php else: ?>
-      <!-- Display message if no upcoming sessions -->
-      <p>Sorry, there are no classes today</p>
+      // Redirect to the login page if the user is not logged in
+      window.location.href = "./app/views/auth/login.php";
     <?php endif; ?>
+  }
+</script>
 
     <!--         <div class="class">
             <h3>Zumba Class</h3>

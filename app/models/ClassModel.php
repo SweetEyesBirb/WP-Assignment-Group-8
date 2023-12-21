@@ -21,4 +21,24 @@ class ClassModel
         $stmt->execute();
         $stmt->close();
     }
+
+
+    public function deleteSession($sessionId)
+    {
+        $stmt = $this->db->getConnection()->prepare("DELETE FROM tbl_classes WHERE class_id = ?");
+        $stmt->bind_param("i", $sessionId);
+        $success = $stmt->execute();
+        $stmt->close();
+
+        return $success;
+    }
+
+    public function deleteBooking($bookingId) {
+        $stmt = $this->db->getConnection()->prepare("DELETE FROM tbl_bookings WHERE booking_id = ?");
+        $stmt->bind_param("i", $bookingId);
+        $success = $stmt->execute();
+        $stmt->close();
+        return $success;
+    }
+
 }

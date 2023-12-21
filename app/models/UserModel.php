@@ -64,11 +64,6 @@ class UserModel
         return $email ?? false;
     }
 
-/*
-    private function validateLoginPassword($password) {
-        return filter_var($password, FILTER_VALIDATE_EMAIL);
-    } */
-
 
     public function validateUserData($data)
     {
@@ -94,14 +89,6 @@ class UserModel
             $errors['dob'] = 'Invalid date of birth';
         }
 
-        /*        // Validate email
-               $email = $this->validateEmail($data['email']);
-
-               if (!$email) {
-                   $errors['email'] = 'Invalid email address';
-               } */
-
-        // Validate email and emailAgain
         $emails = $this->validateEmail($data['email'], $data['email-again']);
         if (isset($emails['error'])) {
             $errors[$emails['field']] = $emails['error'];
@@ -190,18 +177,6 @@ class UserModel
         return password_hash($password, PASSWORD_BCRYPT);
     }
 
-/*     private function emailExists($email)
-    {
-        // Check if the email already exists in the database
-        $stmt = $this->db->getConnection()->prepare("SELECT COUNT(*) FROM tbl_users WHERE email = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $stmt->bind_result($count);
-        $stmt->fetch();
-        $stmt->close();
-
-        return isset($count) && $count > 0;
-    } */
 
     private function emailExists($email)
 {
@@ -226,6 +201,8 @@ class UserModel
         $stmt->execute();
         $stmt->close();
     }
+
+    
 }
 
 ?>

@@ -1,3 +1,26 @@
+<?php
+require_once('../../models/ClassModel.php');
+require_once('../../models/UserModel.php');
+require_once ('../../models/Dashboard.php');
+
+$dashboard = new Dashboard();
+$userModel = new UserModel();
+
+// Assuming $email is the logged-in user's email
+$email = $_SESSION['email']; // Make sure you set the correct session variable
+
+// Get user information
+$userInfo = $userModel->getUserByEmail($email);
+
+$allBookings = $dashboard->getBookings();
+
+if (session_status() === PHP_SESSION_NONE) {
+    // Check if a session is not already started
+    session_start();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,15 +41,28 @@
   <main>
     <section id="dashboard">
       <h1>Dashboard</h1>
-      <p>Welcome to your dashboard, user name!</p> <br>
+      <p>Welcome to your dashboard, <!-- user name! --> <?php echo $userInfo['name']; /* isset($_SESSION['email']) ? isset($_SESSION['email']) : 'Guest'; */ ?></p> <br>
       <p>You can view or cancel your bookings here</p>
 
+      <?php if($allBookings): ?>
+        <?php foreach($allBookings as $booking):?>
       <div class="class booked-class">
-          <h3>Class Name</h3>
-          <p>Date: 02-12-2023</p>
-          <p>Time: 11:00 - 12:00</p>
-          <button id="cancel-booking">Cancel Booking</button>
+          <h3><!-- Class Name --><?php echo $booking['class_name']; ?></h3>
+          <p>Date: <?php echo $booking['formatted_date']; ?></p>
+          <p>Time: <?php echo $booking['formatted_time_start'] . " - " . $booking['formatted_time_end']; ?></p>
+
+          <form action="../../controllers/BookingController.php" method="post">
+          <input type="hidden" name="booking_id" value="<?php echo $booking['booking_id']; ?>">
+          <button name="cancel_booking" id="cancel_booking">Cancel Booking</button>
+          </form>
+
       </div>
+
+      <?php endforeach; ?>
+      <?php else: ?>
+        <!-- Display message if no bookings -->
+        <p>No bookings to display</p>
+      <?php endif; ?>
       
     </section>
   </main>

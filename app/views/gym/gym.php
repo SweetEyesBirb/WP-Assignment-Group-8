@@ -29,7 +29,7 @@ $upcomingSessions = $gymModel->getUpcomingGymSessions();
 <body>
 
   <?php include '../../../includes/header.php';
-  include '../../../includes/navbar.php';
+        include '../../../includes/navbar.php';
   ?>
 
   <main>

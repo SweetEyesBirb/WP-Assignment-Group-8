@@ -4,8 +4,10 @@
 
 require_once('../../controllers/ClassController.php');
 require_once ('../../models/WhatsOn.php');
+require_once ('../../controllers/AdminController.php');
 
 $classController = new ClassController();
+$adminController = new AdminController();
 
 if (isset($_GET['action'])) {
     switch ($_GET['action']) {
@@ -13,6 +15,9 @@ if (isset($_GET['action'])) {
             $classController->addClass();
             break;
         // Add more cases for other actions if needed
+        case 'deleteSession':
+          $adminController->deleteSession();
+          break;
     }
 }
 
@@ -114,7 +119,13 @@ $allSessions = $allClassesModel->getAllSessions();
           <td><?php echo $session['formatted_start_time']; ?></td>
           <td><?php echo $session['formatted_end_time']; ?></td>
           <td><?php echo $session['price']; ?> £</td>
-          <td><button>Delete</button></td>
+          <!-- <td><button>Delete</button></td> -->
+          <td>
+          <form action="admin.php?action=deleteSession" method="post">
+        <input type="hidden" name="session_id" value="<?php echo $session['class_id']; ?>">
+        <button type="submit" name="delete">Delete</button>
+      </form>
+          </td>
         </tr>
         <?php endforeach; ?>
       <?php else: ?>
